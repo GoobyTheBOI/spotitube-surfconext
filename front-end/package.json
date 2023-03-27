@@ -5,7 +5,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --prod --base-href /spotitube/"
+    "build": "ng build --prod --base-href /spotitube/",
     "test": "ng test --watch false",
     "test-coverage": "ng test --watch false --code-coverage",
     "coveralls": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
