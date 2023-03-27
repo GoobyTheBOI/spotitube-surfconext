@@ -1,25 +1,7 @@
 {
-  "builds": [
-    {
-      "src": "front-end/",
-      "use": "@vercel/static-build",
-      "config": {
-        "outputDirectory": "dist/front-end",
-        "base": "/front-end/src/"
-      }
-    }
-  ],
-  "routes": [
-    {
-      "src": "/front-end/(.*)",
-      "dest": "/front-end/index.html"
-    },
-    {
-      "handle": "filesystem"
-    },
-    {
-      "src": ".*",
-      "dest": "/index.html"
-    }
-  ]
+  "build": {
+    "base": "front-end",
+    "command": "npm run build",
+    "output": "dist"
+  }
 }
