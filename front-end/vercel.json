@@ -1,0 +1,11 @@
+{
+  "routes": [
+    { "src": "/(.*)", "headers": { "Content-Type": "text/html;charset=UTF-8" }, "dest": "/index.html" },
+    { "src": "/(.*).(js|css|ico|woff2|woff|ttf|eot|svg|png|jpe?g|gif|json)", "headers": { "cache-control": "max-age=604800, immutable" }, "dest": "/$1.$2" },
+    { "src": "/(api.*)", "methods": ["GET", "POST", "PUT", "DELETE"], "dest": "https://YOUR_API_ENDPOINT.com/$1" }
+  ],
+  "trailingSlash": false,
+  "builds": [
+    { "src": "angular.json", "use": "@vercel/build-angular" }
+  ]
+}
